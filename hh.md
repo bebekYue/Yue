@@ -25,11 +25,11 @@ class Solution:
             a.add(num)   # set没有append
         return -1
 # ----------
-#       hashmap = {}
-#         for num in nums:
-#             if num in hashmap:
-#                 return num
-#             hashmap[num] = 1      
+       hashmap = {}
+         for num in nums:
+             if num in hashmap:
+                 return num
+             hashmap[num] = 1      
 
 ```
 ```python
