@@ -1,14 +1,20 @@
 # 快速排序
-## 思想
+## 原理/思想：
+1.选择一个基线值（通常是左侧第一个）
+2.把大于基线值的数字放在基线的右边
+3.把小于基线的数字放在基线的左边
+4.分别对左右序列重复前三步骤
 ```python
 def quicksort(arry):
-  if len(arry) < 2:
-    return array
-  else:
-  privot = arry[0]
-  less =[i for i in array[1:] if i <= privot]
-  greater =[i for i in array[1:] if i>privot]
-  
-  return quicksort(less) +[privot] +quicksort(gerater)
-print quicksort([10,5,2,3])
+    if len(arry) < 2:
+        return arry
+    else:
+        privot = arry[0]
+    less = [i for i in arry[1:] if i <= privot]
+    greater = [i for i in arry[1:] if i > privot]
+
+    return quicksort(less) + [privot] + quicksort(greater)
+
+
+print(quicksort([10, 5, 2, 3]))
 ```
