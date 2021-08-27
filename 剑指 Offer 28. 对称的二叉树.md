@@ -30,7 +30,7 @@
 
 ## 题解
 <img width="619" alt="截屏2021-08-27 下午11 14 55" src="https://user-images.githubusercontent.com/49756528/131150036-59f2addc-adaa-4a09-ac44-641abc0f9515.png">
-![Uploading 截屏2021-08-27 下午11.15.06.png…]()
+<img width="757" alt="截屏2021-08-27 下午11 15 06" src="https://user-images.githubusercontent.com/49756528/131150173-482be5e8-1e14-4c6b-96ed-c20090130a4d.png">
 
 ```python
     def isSymmetric(self, root: TreeNode) -> bool:
