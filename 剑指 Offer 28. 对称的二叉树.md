@@ -35,14 +35,20 @@
 ```python
     def isSymmetric(self, root: TreeNode) -> bool:
         def recur(L,R):       
-                if not root:
-                    return false
-                    
-                if not L and not R:return True
-                if not L or not R or L.val != R.val:return False 
-                # return recur(L.right, R.left) and return(L.left, R.right) 不可以这样写
-                return recur(L.left, R.right) and recur(L.right, R.left)
+            if not L and not R:return True
+            if not L or not R or L.val != R.val:return False 
+            return recur(L.left, R.right) and recur(L.right, R.left)
 
-        return recur(root.left,root.right)
+        return recur(root.left,root.right) if root else True
+
+
+节点为空的情况有：
+左节点为空，右节点不为空，不对称，return false
+左不为空，右为空，不对称 return false
+左右都为空，对称，返回true
+
+此时已经排除掉了节点为空的情况，那么剩下的就是左右节点不为空：
+左右都不为空，比较节点数值，不相同就return false
+
 
 ```
