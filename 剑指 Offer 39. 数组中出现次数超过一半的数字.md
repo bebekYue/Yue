@@ -41,20 +41,20 @@ class Solution:
 # 开始遍历整个数组,如果当前数字没有在字典中,就把它加入进去,如果在字典中,则把它的数量加 1 
 # 接着判断下它的数量是否是大雨整个数组的一半,如果是的话,则直接返回当前数值,否则,继续遍历.
 # 由于字典的查找时间复杂度为O(1),所以总的时间复杂度为O(n),空间复杂度为O(n)
-    def majorityElement(self, nums):
-            if not nums:
-                return None
-            if len(nums) == 1:
-                return nums[0]
-            write = {}
-            for i in nums:
-                if i not in write:
-                    write[i] = 1
-                else:
-                    write[i] += 1
-                    if write[i] > (len(nums) / 2):
-                        return i
-            return None
+def majorityElement(nums):
+    if not nums:
+        return None
+    if len(nums) == 1:
+        return nums[0]
+    write = {}
+    for i in nums:
+        if i not in write:
+            write[i] = 1   # 拿到的是value值，如让key为1的value变成1，{1：1}
+        else:
+            write[i] += 1  # 拿到的是value值，如让key为3的value变成2，{3：2}，value值是数字出现的次数
+            if write[i] > (len(nums) / 2):
+                return i
+    return None  # 如果没有超过一半的数就是为none
 
 
 
